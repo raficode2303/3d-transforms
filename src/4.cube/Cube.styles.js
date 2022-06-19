@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 `
 
 export const Content = styled.div`
-  width: 400px;
-  height: 200px;
+  width: 50%;
+  height: 50%;
   background-color: yellow;
 `
