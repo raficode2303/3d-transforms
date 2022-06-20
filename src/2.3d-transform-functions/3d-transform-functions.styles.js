@@ -19,3 +19,9 @@ export const Panel = styled.div`
   text-align: center;
   transform: ${(props) => props.transformFunc || props.theme.transform};
 `
+
+Panel.defaultProps = {
+  theme: {
+    transform: 'rotateX(45deg)',
+  },
+}
