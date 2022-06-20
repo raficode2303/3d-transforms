@@ -1,7 +1,6 @@
 import React from 'react'
+import App from './App'
 
-function index() {
-  return <div>index</div>
-}
+const Index = () => <App />
 
-export default index
+export default Index
