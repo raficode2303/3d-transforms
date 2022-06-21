@@ -1,21 +1,22 @@
 import React from 'react'
 import { useState } from 'react'
-import { Scene, Card, CardFace } from './card-flip.styles'
+import { Scene, Card, CardFace, GlobalStyle } from './CardFlip.styles'
 
 const App = () => {
   const [isClicked, setIsClicked] = useState(() => false)
   const [isHover, setIsHover] = useState(() => false)
   return (
     <>
+      <GlobalStyle />
       <Scene>
         <Card
           isFlipped={isHover}
           onMouseOver={() => setIsHover((prev) => !prev)}
         >
-          <CardFace bgColor={'red'}>Front</CardFace>
-          <CardFace bgColor={'blue'} isRotate={true}>
-            Back
+          <CardFace color={'red'} data-value='♦7'>
+            &diams;
           </CardFace>
+          <CardFace bgColor={'blue'} isRotate={true}></CardFace>
         </Card>
         <p>hover To Flip!</p>
       </Scene>
@@ -24,10 +25,10 @@ const App = () => {
           isFlipped={isClicked}
           onClick={() => setIsClicked((prev) => !prev)}
         >
-          <CardFace bgColor={'red'}>Front</CardFace>
-          <CardFace bgColor={'blue'} isRotate={true}>
-            Back
+          <CardFace color={'black'} data-value='♣2'>
+            &clubs;
           </CardFace>
+          <CardFace isRotate={true}></CardFace>
         </Card>
         <p>click To Flip!</p>
       </Scene>
